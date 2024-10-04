@@ -1,0 +1,98 @@
+/* Container for Table */
+.table-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Change to pure white for better contrast */
+    border-radius: 12px; /* Increased radius for a more rounded look */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15); /* Softer shadow for better depth */
+    border: 1px solid #e0e0e0; /* Add subtle border for definition */
+}
+
+/* Table Style */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fafafa; /* Subtle background color for a clean look */
+}
+
+/* Table Headers and Cells */
+.styled-table th, .styled-table td {
+    padding: 14px 18px; /* Increased padding for better spacing */
+    border: 1px solid #ddd;
+    font-weight: 500; /* Increase font weight for readability */
+}
+
+/* Header Style */
+.styled-table th {
+    cursor: pointer; /* Ensure pointer cursor on clickable table headers */
+    background-color: #3A7D44; /* More subtle green color for a professional look */
+    color: #ffffff;
+    position: sticky; /* Keeps headers visible during scrolling */
+    top: 0;
+    box-shadow: inset 0 -1px 0 #ddd; /* Add subtle line under header */
+}
+
+/* Table Rows */
+.styled-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f7f7f7; /* Slightly lighter gray for even rows */
+}
+
+.styled-table tr:hover {
+    background-color: #e9f5e9; /* Highlight row on hover with a soft green */
+    cursor: pointer; /* Ensure pointer cursor on row hover */
+}
+
+/* Pagination Container */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pagination Buttons */
+.pagination button {
+    background-color: #3A7D44; /* Consistent color with table header */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px; /* Increase radius for rounded button appearance */
+    cursor: pointer; /* Ensure pointer cursor on pagination buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform for effect */
+}
+
+.pagination button:disabled {
+    background-color: #b0b0b0; /* Use a lighter gray for disabled buttons */
+    cursor: not-allowed; /* Use not-allowed cursor for disabled buttons */
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #2e5f33; /* Darken color slightly on hover */
+    transform: translateY(-2px); /* Lift button slightly for a visual effect */
+}
+
+/* Pagination Text */
+.pagination span {
+    font-size: 16px;
+    color: #555; /* Use a subtle gray color */
+}
+
+/* Responsive Table Adjustments */
+@media (max-width: 768px) {
+    .styled-table th, .styled-table td {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    .pagination {
+        flex-wrap: wrap; /* Stack pagination buttons on smaller screens */
+        gap: 5px;
+    }
+}
